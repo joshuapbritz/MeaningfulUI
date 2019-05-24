@@ -1,7 +1,19 @@
 :host {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  grid-gap: 10px;
+
+  opacity: 0;
+  animation: FadeIn 600ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+
   max-width: var(--app-max-width);
   width: var(--app-width);
   margin: auto;
-  padding: 70px 0;
+  // border-top: solid 1px var(--yankee-blue);
+  padding-top: 20px;
+
+  div {
+    background-color: var(--independence);
+  }
 }

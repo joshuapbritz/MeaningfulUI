@@ -12,8 +12,8 @@
     [class.followed]="isFollowed"
     [ngClass]="stateName | lowercase"
     (click)="isFollowed = !isFollowed"
-  >
-    {{isFollowed ? 'Unfollow' : 'Follow'}}
-  </div>
+  ></div>
   <div class="image" [ngClass]="stateName | lowercase"></div>
+
+  <div class="name" [ngClass]="stateName | lowercase"></div>
 </div>
