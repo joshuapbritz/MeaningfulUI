@@ -1,0 +1,12 @@
+<div class="top">
+  <div class="inner-wrapper">
+    <a routerLink="/">Home</a>
+    <a routerLink="/info">Info</a>
+    <a routerLink="/settings">Settings</a>
+  </div>
+</div>
+
+<div class="content-control inner-wrapper">
+  <div class="button" [ngClass]="stateName | lowercase"></div>
+  <div class="image" [ngClass]="stateName | lowercase"></div>
+</div>
