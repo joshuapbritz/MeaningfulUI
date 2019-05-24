@@ -23,9 +23,14 @@
     height: 200px;
     position: relative;
 
+    .followers {
+      width: auto;
+      line-height: 50px;
+    }
+
     .button {
-      width: 200px;
-      height: 40px;
+      width: 150px;
+      height: 30px;
       border-radius: 20px;
       background-color: var(--jelly-bean);
       position: absolute;
@@ -34,6 +39,36 @@
       opacity: 0;
       will-change: width, height, left, bottom, border-radius, opacity;
       transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+      text-align: center;
+      line-height: 30px;
+      color: var(--background);
+      letter-spacing: 2px;
+      cursor: pointer;
+      z-index: 2;
+
+      &.followed {
+        background-color: rgb(3, 146, 79);
+
+        &::after {
+          content: '-';
+        }
+      }
+
+      &::after {
+        content: '+';
+        font-size: 20px;
+        color: var(--background);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+        opacity: 0;
+      }
 
       &.home {
         bottom: -45px;
@@ -42,12 +77,19 @@
       }
 
       &.info {
-        bottom: 160px - 40px;
-        left: 160px;
+        width: 30px;
+        bottom: 10px;
+        left: 120px;
         opacity: 1;
+        color: transparent;
+
+        &::after {
+          opacity: 1;
+        }
       }
 
       &.settings {
+        color: transparent;
       }
     }
 

@@ -13,6 +13,8 @@ enum States {
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  public isFollowed = false;
+
   public state: States;
 
   public get stateName(): string {

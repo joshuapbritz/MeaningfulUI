@@ -7,6 +7,13 @@
 </div>
 
 <div class="content-control inner-wrapper">
-  <div class="button" [ngClass]="stateName | lowercase"></div>
+  <div
+    class="button"
+    [class.followed]="isFollowed"
+    [ngClass]="stateName | lowercase"
+    (click)="isFollowed = !isFollowed"
+  >
+    {{isFollowed ? 'Unfollow' : 'Follow'}}
+  </div>
   <div class="image" [ngClass]="stateName | lowercase"></div>
 </div>
