@@ -1,12 +1,12 @@
 <div class="top">
   <div class="inner-wrapper">
-    <a routerLink="/">Home</a>
-    <a routerLink="/info">Info</a>
-    <a routerLink="/settings">Settings</a>
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/">Home</a>
+    <a routerLinkActive="active" routerLink="/info">Info</a>
+    <a routerLinkActive="active" routerLink="/settings">Settings</a>
   </div>
 </div>
 
-<div class="content-control inner-wrapper">
+<div class="content-control inner-wrapper" [class.skip-transitions]="navcount <= 1">
   <div
     class="button"
     [class.followed]="isFollowed"

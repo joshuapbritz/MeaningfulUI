@@ -11,7 +11,12 @@
   width: var(--app-width);
   margin: auto;
   // border-top: solid 1px var(--yankee-blue);
-  padding-top: 20px;
+  padding: 50px 0;
+
+  @media screen and (max-width: 750px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 200px 200px 200px;
+  }
 
   div {
     background-color: var(--independence);

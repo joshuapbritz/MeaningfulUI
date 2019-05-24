@@ -15,6 +15,8 @@ enum States {
 export class NavbarComponent implements OnInit {
   public isFollowed = false;
 
+  public navcount = 0;
+
   public state: States;
 
   public get stateName(): string {
@@ -27,10 +29,7 @@ export class NavbarComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    routeState.subscribe(url => {
-      this.mapState(url);
-      console.log(this.stateName);
-    });
+    routeState.subscribe(this.mapState.bind(this));
   }
 
   private mapState(url: string): void {
@@ -47,5 +46,7 @@ export class NavbarComponent implements OnInit {
         this.state = States.SETTINGS;
         break;
     }
+
+    this.navcount++;
   }
 }
