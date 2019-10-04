@@ -1,4 +1,4 @@
-# my-project
+# Preact
 
 ## CLI Commands
 
