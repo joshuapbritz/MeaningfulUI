@@ -8,6 +8,7 @@ import styles from './app.css';
 import Home from '../routes/home';
 import Info from '../routes/info';
 import Settings from '../routes/settings';
+import About from '../routes/about';
 // import Profile from '../routes/profile';
 
 export default class App extends Component {
@@ -71,6 +72,7 @@ export default class App extends Component {
           <Home path="/" stateValue={this.state.stateValue} />
           <Info path="/info" stateValue={this.state.stateValue} />
           <Settings path="/settings" stateValue={this.state.stateValue} />
+          <About path="/about" stateValue={this.state.stateValue} />
         </Router>
       </main>
     );
